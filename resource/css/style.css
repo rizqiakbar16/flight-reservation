@@ -66,7 +66,9 @@ h1{
     padding: 15px 0px;
     margin: 0 auto;
     text-align: center;
-	background: #FFC107;
+	background: #0064d2;
+	border-top-left-radius: 6px;
+	border-top-right-radius: 6px;
 }
 .resp-tab-item {
     font-size: 1.1em;
@@ -112,7 +114,7 @@ form {
 }
 h3 {
     font-size: 16px;
-    color:#FFC107;
+    color:#fff;
     margin-bottom: 7px;
 }
 .from,.to,.date,.depart,.return{
@@ -280,7 +282,7 @@ input[type="checkbox"]{
 input[type="submit"] {
     font-size: 14px;
     color: #fff;
-    background:#ffc107;
+    background:#0064d2;
     border: none;
     outline: none;
     padding: 10px 20px;

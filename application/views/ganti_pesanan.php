@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Flights Ticket Booking a Flat Responsive Widget Template :: w3layouts</title>
+	<title>Flight Ticket Booking a Flat Responsive Widget Template :: w3layouts</title>
 	<link rel="stylesheet" href="<?php echo base_url();?>resource/css/style.css">
 	<link href='//fonts.googleapis.com/css?family=Open+Sans:400,300italic,300,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
 	<link href='//fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
@@ -21,27 +21,33 @@
 				</ul>	
 				<div class="clearfix"> </div>	
 				<div class="resp-tabs-container">
-<!-- one way mamen -->		
+<!-- one way mamen -->
+
+<?php
+	foreach($data as $m){
+?>
+				<form action="<?php echo base_url();?>index.php/welcome/proses_ganti" method="post">
 					<div class="tab-1 resp-tab-content resp-tab-active oneway">
-						<form action="<?php echo base_url();?>index.php/welcome/tambah_pesan" method="post">
 							<div class="from">
 								<h3>From</h3>
-								<input type="text" name="from" class="city1" placeholder="Type Departure City" required="">
+								<input type="hidden" name="id" value="<?php echo $m->id?>"   class="city1" placeholder="Type Departure City" required="">
+								<input type="text" name="from" value="<?php echo $m->from?>"   class="city1" placeholder="Type Departure City" required="">
 							</div>
 							<div class="to">
 								<h3>To</h3>
-								<input type="text" name="to" class="city2" placeholder="Type Destination City" required="">
+								<input type="text" name="to" value="<?php echo $m->to?>" class="city2" placeholder="Type Destination City" required="">
 							</div>
 							<div class="clear"></div>
 							<div class="date">
 								<div class="depart">
 									<h3>Depart</h3>
-									<input class="date" id="datepicker2" name="depart" type="text" value="mm/dd/yyyy" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'mm/dd/yyyy';}" required="">
+									<input class="date" id="datepicker2" name="depart" type="text" value="<?php echo $m->depart?>" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'mm/dd/yyyy';}" required="">
 								</div>
 							</div>
 							<div class="class">
 								<h3>Class</h3>
 								<select id="w3_country1" name="class" onchange="change_country(this.value)" class="frm-field required">
+									<option value="<?php echo $m->class?>"><?php echo $m->class?></option>  
 									<option value="Economy">Economy</option>  
 									<option value="Premium Economy">Premium Economy</option>   
 									<option value="Business">Business</option>   
@@ -52,16 +58,16 @@
 							<div class="clear"></div>
 							<div class="numofppl">
 								<div class="adults">
-									<h3 >Adult:(12+ yrs)</h3>
+									<h3>Adult:(12+ yrs)</h3>
 									<div class="quantity-select"> 
-										<input type="number" name="adults" value="0" min="0" max="10" style="padding:10%">
+										<input type="number" name="adults" value="<?php echo $m->adults;?>" min="0" max="10" style="padding:10%">
 									</div>
 								</div>
 								<div class="child">
 									<h3>Child:(2-11 yrs)</h3>
 									<div class="quantity"> 
 										<div class="quantity-select">                           
-											<input type="number" name="child" value="0" min="0" max="10" style="padding:10%;">
+											<input type="number" name="child" value="<?php echo $m->child?>" min="0" max="10" style="padding:10%;">
 									</div>
 								</div>
 							</div>
@@ -69,8 +75,8 @@
 							</div>
 							<div class="clear"></div>
 							<input type="submit" value="Search Flights">
-						</form>	
-								
+						</form>
+	<?php } ?>
 					</div>
 <!-- Multy City mamen-->
 	<div class="footer-w3l">
