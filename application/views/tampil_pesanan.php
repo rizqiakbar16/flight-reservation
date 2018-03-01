@@ -3,20 +3,20 @@
 <head>
 	<title>TAMPIL</title>
 </head>
-	<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>resource/admin/bootstrap/css/bootstrap.css">
-	<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>resource/admin/bootstrap/css/bootstrap-theme.css">
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>resource/bootstrap/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>resource/bootstrap/css/bootstrap-theme.css">
 <body>
 <div class="container-fluid col-md-offset-2 col-md-8 " style=" margin-top: 10%; align:center">
 		<table class="table table-responsive table-bordered table-hover " style="align:left">
 	<tr>
-        <th style="background-color: #7bed9f">No</th>
-        <th style="background-color: #7bed9f">From</th>
-        <th style="background-color: #7bed9f">To</th>
-        <th style="background-color: #7bed9f">Depart</th>
-        <th style="background-color: #7bed9f">Class</th>
-        <th style="background-color: #7bed9f">Adults</th>
-        <th style="background-color: #7bed9f">Child</th>
-        <th style="background-color: #7bed9f">Aksi</th>
+        <th>No</th>
+        <th>From</th>
+        <th>To</th>
+        <th>Depart</th>
+        <th>Class</th>
+        <th>Adult</th>
+        <th>Child</th>
+        <th>Aksi</th>
 	</tr>
     <?php
         $no = 1; 
